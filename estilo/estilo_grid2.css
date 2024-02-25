@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --laranja: #F26521;
+    --amarelo: #FCB016;
+    --verde: #00A69A;
+    --azul: #22F2E4;
+    --cinzaClaro: #f8f8f8;
+    --cinzaEscuro: #333333;
+    --maxWidth1: 1440px;
+    --maxWidth2: 1024px;
+    --maxWidth3: 860px;
+    --gap1: 1.5em;
+    --gap2:.75em;   
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* //////////////TEXTOS///////////////////// */
+.titulo2 {
+    font-size: 2em;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.25;
+}
+
+.titulo3 {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.titulo4 {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.btn {
+    padding: 1em .75em;
+    width: 15em;
+    font-weight: 700;
+    border-radius: .5em;
+    border: none;
+    cursor: pointer;
+    background-color: var(--laranja);
+    color: var(--cinzaClaro);
+}
+
+/* ///////////////Centraliza///////////// */
+.centraliza {
+    max-width: var(--maxWidth1);
+    margin: auto;
+}
+
+/* //////////////CABECALHO////////////// */
+.cabecalho {
+    color: var(--laranja);
+}
+
+.cabecalho .centraliza {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .75em 0;
+}
+
+.cabecalho img {
+    width: 150px;
+}
+
+.cabecalho p {
+    display: inline-block;
+}
+
+.cabecalho .bi {
+    margin-right: .25em;
+    font-size: 1.25em;
+}
+
+/* ////////////////SEARCH///////////// */
+.search {
+    background-color: var(--laranja);
+    color: white;
+}
+
+.search .centraliza {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75em;
+}
+
+.search p {
+    display: inline-block;
+}
+
+.search input {
+    padding: .25em;
+    border: none;
+    width: 20em;
+    margin-right: .25em;
+    border-radius: .25em;
+    outline: none;
+}
+
+.search .bi {
+    margin-right: .25em;
+    font-size: 1.25em;
+}
+
+/* //////////////////////NAV//////////////////// */
+.navegacao {
+    text-align: center;
+}
+
+.navegacao .centraliza {
+    padding: .75em;
+    text-align: center;
+}
+
+.navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3.5em;
+}
+
+.navegacao li {
+    display: inline-block;
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: var(--cinzaEscuro);
+    display: inline-block;
+    font-size: 1em;
+}
+
+/* ////////////////////////////DESTAQUE//////////////////////// */
+.destaque {
+    text-align: center;
+    display: grid;
+    gap: var(--gap1);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'voltaAulas monteEscritorio monteEscritorio'
+        'facil1 facil2 facil3';
+}
+
+.destaque section {
+    padding: 5em 3em;
+    color: var(--cinzaClaro);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.destaque section h2,
+.destaque section p {
+    margin-bottom: 1em;
+}
+
+#volta__aulas {
+    grid-area: voltaAulas;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagens/escola1.jpg);
+    background-size: cover;
+}
+
+#monte__escritorio {
+    grid-area: monteEscritorio;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(../imagens/escritorio1.jpg);
+    background-size: cover;
+}
+
+#monte__escritorio P {
+    width: 70%;
+}
+
+.destaque article {
+    background-color: var(--verde);
+    color: var(--cinzaClaro);
+    padding: 2em 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.destaque article h3 {
+    margin-bottom: 1em;
+}
+
+#facili__1 {
+    grid-area: facil1;
+}
+
+#facili__2 {
+    grid-area: facil2;
+}
+
+#facili__3 {
+    grid-area: facil3;
+}
+
+/* /////////////////////////////POPULARES/////////////////////) */
+.populares h2 {
+    color: var(--laranja);
+    text-align: center;
+    margin: 2.5em 0 1em;
+}
+
+.populares__grid {
+    display: grid;
+    gap: var(--gap1);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.populares__grid div {
+    background-color: var(--cinzaClaro);
+}
+
+.populares__grid img {
+    width: 90%;
+    margin: auto;
+    transition: .5s;
+}
+.populares__grid img:hover{
+    transform: scale(1.25);
+    transition: .5s;
+}
+
+.populares__grid article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.populares__grid h4 {
+    margin: .5em 0 0;
+}
+
+/* ///////////////////////////CATEGORIA/////////////////////// */
+.categoria h2 {
+    color: var(--laranja);
+    text-align: center;
+    margin: 2.5em 0 1em
+}
+
+.categoria__grid {
+    display: grid;
+    gap: var(--gap1);;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#cat1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagens/papelaria3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#cat2{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagens/escritorio1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#cat3{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagens/escola2.jpg);
+    background-size: cover;
+}
+#cat4{
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../imagens/limpeza.jpg);
+    background-size: cover;
+}
+#cat5{
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../imagens/cafe.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+#cat6{
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../imagens/escritorio2.jpg);
+    background-size: cover;
+}
+#cat7{
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../imagens/papelaria1.jpg);
+    background-size: cover;
+}
+#cat8{
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../imagens/eletronicos.jpg);
+    background-size: cover;
+}
+
+.categoria__grid div{
+    padding: 5em 1em;
+    color: var(--cinzaClaro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.categoria__grid hr{
+    width: 50%;
+}
+/* ///////////////////////////DESTAQUE2/////////////////////// */
+.destaque2{
+    display: grid;
+    gap:var(--gap1);;
+    grid-template-columns: 1fr 1fr;
+    margin: 5em auto;
+}
+.destaque2 section{
+    color: var(--cinzaClaro);
+    padding: 3em 7em 3em 3em ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.destaque2 h2{
+    margin-bottom: .5em;
+}
+.destaque2 p{
+    margin-bottom: 1em;
+}
+.destaque2 section:nth-child(1){
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../imagens/escola1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.destaque2 section:nth-child(2){
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../imagens/mobiliario.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/* ////////////////////////////////////APLICATIVO/////////////////////////////// */
+.aplicativo{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.45)), url(../imagens/PHONE.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 3em 3em 3em 30%;
+    color:var(--cinzaClaro);
+}
+.aplicativo img{
+    height: 300px;
+    margin-right: 2em;
+}
+.aplicativo div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* ///////////////////////////////////CLUBE///////////////////////////// */
+.clube{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.clube article{
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.clube h2{
+    margin-bottom: .5em;
+}
+.clube p{
+    margin-bottom: 2em;
+}
+.clube .dupla__input{
+    display: flex;
+}
+.clube input[type=text]{
+    padding: .5em;
+    border: none;
+    width: 20em;
+    margin-right: .5em;
+    border-radius: .25em;
+    outline: none;
+}
+.clube input[type=submit]{
+    background-color: var(--amarelo);
+    color: var(--cinzaClaro);
+    padding: .5em 1.5em;
+    border: none;
+    border-radius: .25em;
+    cursor: pointer;
+}
+.clube article:nth-child(1){
+    background-color: var(--verde);
+    color: var(--cinzaClaro);
+}
+.clube article:nth-child(2){
+    background-color: var(--amarelo);
+    color: var(--cinzaEscuro);
+}
+.card__branco{
+    background-color: var(--cinzaClaro);
+    padding: 1em 5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.clube hr{
+    border: 1px solid var(--cinzaEscuro);
+    width: 80%;
+    margin: 0;
+    margin-bottom: .5em;
+}
+/* ///////////////////////////////RODAPE////////////////////////// */
+.rodape{
+    background-color: var(--laranja);
+    padding: 1em 0;
+    color:var(--cinzaClaro);
+}
+.rodape div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bandeiras__card{
+    display: flex;
+    gap: 2em;
+    font-size: 2em;
+}
+
+/* /////////////////RESPONSIVIDADE/////////////////////// */
+@media screen and (max-width:1450px) {
+    .centraliza{
+        max-width: var(--maxWidth2);
+    }
+}
+
+@media  screen and (max-width: 1025px) {
+    .centraliza{
+        max-width: var(--maxWidth3);
+        padding: 1;
+    }
+}
+@media  screen and (max-width: 860px) {
+    .centraliza{
+        max-width: var(--maxWidth3);
+        padding: .5;
+    }
+    .destaque section, .destaque article{
+        padding: 1.5em;
+    }
+    .populares__grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .categoria__grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .destaque2 section{
+        padding: 1em;
+    }
+    .aplicativo{
+        padding: 2em;
+    }
+    .aplicativo img{
+        height: 200px;
+        margin-right: 1em;
+    }
+    .clube article{
+        padding: 2em 1em;
+    }
+    .card__branco{
+        padding: 2em 1em;
+    }
+    .rodape{
+        padding: 1em;
+    }
+}
+@media screen and (max-width:750px){
+    
+}
